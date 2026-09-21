@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Побег во двор школы</title>
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🏫 Побег во двор школы</h1>
+
+  <!-- Панель состояния -->
+  <div class="status-bar">
+    <div><span class="stat-item">Шум:</span> <span id="noise-val">0</span>/100</div>
+    <div><span class="stat-item">Скрытность:</span> <span id="stealth-val">Высокий</span></div>
+    <div><span class="stat-item">Цель:</span> Свобода!</div>
+  </div>
+
+  <div id="log"></div>
+
+  <div style="text-align: center; margin-top: 10px;">
+    <input type="text" id="cmd-input" placeholder="Введи команду..." />
+    <button onclick="runCommand()">Выполнить</button>
+  </div>
+  <br>
+  <div style="text-align: center;">
+    <button onclick="move('north')">↑ Север (К забору)</button>
+    <button onclick="move('south')">↓ Юг (Вход в школу)</button>
+    <button onclick="move('east')">→ Восток (Сарай)</button>
+    <button onclick="move('west')">← Запад (Калитка)</button>
+  </div>
+
+  <!-- Подключаем логику игры -->
+  <script src="script.js"></script>
+</body>
+</html>
